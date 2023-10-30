@@ -3,7 +3,7 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
-app.use(cors());
+app.use(cors({ origin: "https://master--warm-pegasus-40c82a.netlify.app/" }));
 
 const server = http.createServer(app);
 
@@ -11,7 +11,6 @@ const io = new Server(server, {
   cors: {
     // origin: "http://localhost:3000",
     // origin: "https://master--warm-pegasus-40c82a.netlify.app/",
-    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   },
