@@ -12,6 +12,7 @@ const io = new Server(server, {
     // origin: "http://localhost:3000",
     origin: "https://master--warm-pegasus-40c82a.netlify.app/",
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
